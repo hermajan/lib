@@ -18,4 +18,21 @@
       presmerovat($kam);
     }
  } 
+ 
+ 
+ function tisk() {
+   echo "<a href='javascript:window.print()' target='_self'>Vytisknout</a>";
+ }
+ function obnovit() {
+   echo "<a href='javascript:location.reload()' target='_self'>Obnovit</a>";
+ }
+ function zpet() {
+   echo "<a href='javascript:history.back(1)'>Zpět</a>";
+ }
+ function vpred() {
+   echo "<a href='javascript:history.forward(1)'>Vpřed</a>";
+ }
+ function poslaniEmailu($adresa,$predmet) {
+   echo "<a href='mailto:$adresa?subject=$predmet'>Napište mi.</a>";
+ }
 ?>

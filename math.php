@@ -18,7 +18,7 @@
    }
  }
  function faktorial($cislo) {
-  if(is_numeric($cislo) AND $cislo>0) {
+  if(is_numeric($cislo) AND $cislo>=0) {
     if($cislo==0) {
       return 1;
     }

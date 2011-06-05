@@ -6,8 +6,9 @@
     <?php require_once "loader.php"; ?>
   </head>
   <body>
-    <?php obsahSlozky("."); ?>
+    <?php echo faktorial(0)."<br>".faktorial(-1)."<hr>".mocnina(2,1.75); ?>
     <hr> 
-    <?php echo faktorial(-1)."<hr>".mocnina(2,1.75);?>
+    <script>svatek("1","1");</script>
+    <?php echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
   </body>
 </html>

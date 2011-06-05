@@ -1,5 +1,6 @@
 <!-- JavaScript -->
 <script src='skript.js' type="text/javascript"></script>
+<script src='svatek.js' type="text/javascript"></script>
 
 <!-- Nette --><!--
 <?php //require 'nette/Nette-minified/loader.php'; ?>
