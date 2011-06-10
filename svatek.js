@@ -1,9 +1,9 @@
 // Pole se svátky v jednotlivých měsících
-  var Leden=new Array ("Nový rok -> Den obnovy samostatného českého státu","Karina","Radmila","Diana","Dalimil","Tři králové","Vilma","Čestmír",
+  var Leden=new Array("Nový rok -> Den obnovy samostatného českého státu","Karina","Radmila","Diana","Dalimil","Tři králové","Vilma","Čestmír",
     "Vladan","Břetislav","Bohdana","Pravoslav","Edita","Radovan","Alice","Ctirad",
     "Drahoslav","Vladislav","Doubravka","Ilona","Běla","Slavomír","Zdeněk","Milena",
     "Miloš","Zora","Ingrid","Otýlie","Zdislava","Robin","Marika");
-  var Unor=new Array ("Hynek","Nela","Blažej","Jarmila","Dobromila","Vanda","Veronika","Milada",
+  var Unor=new Array("Hynek","Nela","Blažej","Jarmila","Dobromila","Vanda","Veronika","Milada",
     "Apolena","Mojmír","Božena","Slavěna","Věnceslav","Valentýn","Jiřina","Ljuba",
     "Miloslava","Gizela","Patrik","Oldřich","Lenka","Petr","Svatopluk","Matěj",
     "Liliana","Dorota","Alexandr","Lumír","Horymír");
@@ -54,9 +54,9 @@
 // Vrátí která k zadanému datu jméno oslavence nebo prázdný řetězec
   function getJmeno(datum){
     // Zjistí se číslo měsíce (0-11)
-    var mesic=datum.getMonth();
+    var mesic=datum.getMonth()-1;
     // Zjistí se číslo dne (1-31), kvůli indexaci v poli od 0 je třeba odečíst jedničku
-    var den=datum.getDate() - 1;
+    var den=datum.getDate()-1;
 
     // Kontrola, zda pole obsahuje příslušnou položku a vrácení jména oslavence
     if((mesic<jmena.length) && (den<jmena[mesic].length)) {
@@ -80,19 +80,23 @@
       document.write('Dnes asi nemá nikdo svátek.');
     }
   }
+  
   function svatek(den,mesic) {
     // Získání aktuálního data
     var datum=new Date();
-    // Nastavení data, měsíc se indexuje od 0
-    var month=mesic-1;
-    datum.setFullYear(0,month,den)
+    if((den==null || den==0) && (mesic==null || mesic==0)) {
+      den=datum.getDate();
+      mesic=datum.getMonth()+1; // leden je 0
+    }
+    // Nastavení data
+    datum.setFullYear(0,mesic,den)
     // Zjištění jména oslavence
     var jmeno=getJmeno(datum);
     // Vypsání jména oslavence
     if (jmeno!='') {
-      document.write(den+'.'+mesic+' má svátek <B>'+jmeno+'</B>.');
+      document.write(den+'.'+mesic+'. má svátek <B>'+jmeno+'</B>.');
     }
     else {
-      document.write(den+'.'+mesic+' asi nemá nikdo svátek.');
+      document.write(den+'.'+mesic+'. asi nemá nikdo svátek.');
     }
   }

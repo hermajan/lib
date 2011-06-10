@@ -8,7 +8,13 @@
   <body>
     <?php echo faktorial(0)."<br>".faktorial(-1)."<hr>".mocnina(2,1.75); ?>
     <hr> 
-    <script>svatek("1","1");</script>
-    <?php echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
+    <?php svatek();
+    echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
+    <hr>
+    <?php 
+      cas(1);
+    ?>
+    
+    
   </body>
 </html>
