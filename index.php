@@ -12,7 +12,10 @@
     echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
     <hr>
     <?php 
-      cas(1);
+      cas(1);echo "<hr>";
+      obsahSlozky("cas");echo "<hr>";
+      denVtydnu();
+      datum();
     ?>
     
     
