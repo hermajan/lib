@@ -31,4 +31,4 @@ if(file_exists("favicon.ico")){
     //NDebug::enable(NDebug::DEVELOPMENT);
 ?>-->
 <!-- PHP -->
-<?php require_once "akce.php"; require_once "db.php"; require_once "file.php"; require_once "math.php";?>
+<?php require_once "akce.php"; require_once "db.php"; require_once "file.php"; require_once "math.php"; require_once "net.php";?>

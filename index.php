@@ -6,9 +6,9 @@
     <?php require_once "loader.php"; ?>
   </head>
   <body>
-    <?php echo faktorial(0)."<br>".faktorial(-1)."<hr>".mocnina(2,1.75); ?>
+    <?php echo faktorial(4)."<br>".faktorial(-1)."<hr>".mocnina(2,1.75); ?>
     <hr> 
-    <?php svatek();
+    <?php echo svatek();
     echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
     <hr>
     <?php 
@@ -16,6 +16,8 @@
       obsahSlozky("cas");echo "<hr>";
       denVtydnu();
       datum();
+      
+      echo "<hr><br>".getIPv4();
     ?>
     
     

@@ -23,9 +23,7 @@
       return 1;
     }
     else {
-      for($i=0;$i<=$cislo;$i++) {
-        return $cislo*($cislo-$i);
-      }
+        return $cislo*faktorial($cislo-1);
     }
   }
   else {
