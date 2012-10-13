@@ -3,21 +3,18 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
-    <?php require_once "loader.php"; ?>
+    <?php require_once 'loading.php'; loadLoader("."); ?>
   </head>
   <body>
-    <?php echo faktorial(4)."<br>".faktorial(-1)."<hr>".mocnina(2,1.75); ?>
+    <?php echo factorial(4)."<br>".factorial(-1)."<hr>".mocnina(2,1.75); ?>
     <hr> 
     <?php echo svatek();
     echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
     <hr>
     <?php 
-      cas(1);echo "<hr>";
-      obsahSlozky("cas");echo "<hr>";
-      denVtydnu();
-      datum();
-      
-      echo "<hr><br>".getIPv4();
+      folderContentWithoutDots("time");echo "<hr>";
+     
+      echo getIPv4();
     ?>
     
     

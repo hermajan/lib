@@ -1,33 +1,21 @@
 <?php
- function mocnina($zaklad, $exponent) {
-   if(is_numeric($zaklad) AND is_numeric($exponent)) {
-    $exp=abs($exponent);
-    $vysledek=1;
-    for($i=1;$i<=$exp;$i++) {
-        $vysledek*=$zaklad;
+ function mocnina($base, $exponent) {
+    if(is_numeric($base) AND is_numeric($exponent)) {
+      $exp=abs($exponent);
+      $result=1;
+
+      for($i=1;$i<=$exp;$i++) { $result*=$base; }
+
+      if($exponent<0) { return 1/$result; }
+      else { return $result; }
     }
-    if($exponent<0) {
-      return 1/$vysledek;
-    }
-    else { 
-      return $vysledek;
-    }
-   }
-   else {
-     return "Musíte zadat celá čísla!";
-   }
+    else { return "You must enter an integer number!"; }
  }
- function faktorial($cislo) {
-  if(is_numeric($cislo) AND $cislo>=0) {
-    if($cislo==0) {
-      return 1;
+ function factorial($number) {
+    if(is_numeric($number) AND $number>=0) {
+      if($number==0) { return 1; }
+      else { return $number*factorial($number-1); }
     }
-    else {
-        return $cislo*faktorial($cislo-1);
-    }
-  }
-  else {
-    return "Musíte zadat celé kladné číslo!";
-  }
+    else { return "You must enter a positive integer number!"; }
  }  
 ?>

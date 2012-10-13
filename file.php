@@ -1,29 +1,38 @@
 <?php
- function upload() {
+ function upload($where) {
+    if(!is_string($where)) {
+        $where="http://".$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF'])."/upload/";
+    }
     echo "<form action='' method='post' enctype='multipart/form-data'>
-	    Soubor: <input type='file' name='soubor' value=''>
-		  <input type='submit' name='odeslat' value='Nahrát soubor'>
+	    File: <input type='file' name='ffile' value=''>
+		  <input type='submit' name='send' value='Upload'>
 	  </form>";
 	 
-    if(isset($_FILES["soubor"])) {
-      if(file_exists("upload/".$_FILES["soubor"]["name"])) {
-        echo "Soubor existuje!";
+    if(isset($_FILES["ffile"])) {
+      if(file_exists($where.$_FILES["ffile"]["name"])) {
+        echo "File exists!";
       }
       else {
-        if(move_uploaded_file($_FILES["soubor"]["tmp_name"],"upload/".$_FILES["soubor"]["name"])) {
-            echo "Soubor byl nahrán do <a href='http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["PHP_SELF"])."/upload/".$_FILES["soubor"]["name"]."'>".
-             "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["PHP_SELF"])."/upload/".$_FILES["soubor"]["name"]."</a><br>";
+        if(move_uploaded_file($_FILES["ffile"]["tmp_name"],$where.$_FILES["ffile"]["name"])) {
+            echo "File has been uploaded to <a href='".$where.$_FILES["ffile"]["name"]."'>".$where.$_FILES["ffile"]["name"]."</a><br>";
         }
         else {
-          echo $_FILES["soubor"]["error"];
+          echo $_FILES["ffile"]["error"];
         }
       }
     }
  }
- function obsahSlozky($slozka) {  
-    $obsah = scandir($slozka);  
-    foreach($obsah as $soubor) {  
-      echo "<a href='".$slozka."/".$soubor."'>".$soubor."</a><br>";  
-    }    
+
+ function folderContent($folder) {  
+    $content = scandir($folder);  
+    foreach($content as $file) { echo "<a href='".$folder."/".$file."'>".$file."</a><br>"; }    
+ }
+ function folderContentWithoutDots($folder) {  
+    $content = scandir($folder);  
+	foreach($content as $file) { 
+		if(strcmp($file,".")!=0 AND strcmp($file,"..")!=0) {
+			echo "<a href='".$folder."/".$file."'>".$file."</a><br>"; 
+		}
+	}
  }
 ?>
