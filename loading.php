@@ -46,7 +46,7 @@ namespace lib;
                 continue;
             }
         else {
-            if(preg_match("~loader.php$~", $file)) {
+            if(preg_match("~_loader.php$~", $file)) {
                 require_once $directory."/".$file;
               }
         }
