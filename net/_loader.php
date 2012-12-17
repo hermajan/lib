@@ -1,5 +1,5 @@
-<?php
-require_once '../loading.php';
+<?php 
+require_once dirname(__DIR__).'/Loading.php';
 
-load(".");
+\lib\Loading::load(__DIR__);
 ?>

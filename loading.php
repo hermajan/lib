@@ -3,10 +3,11 @@
  * Loading files from directories.
  * 
  * @author DJohnny
- * @version 11.12.2012
+ * @version 12.12.2012
  */
 namespace lib;
 
+class Loading {
 /**
  * Loads files from desired directory.
  * 
@@ -16,7 +17,7 @@ namespace lib;
   function load($directory) {  
     $content = scandir($directory);  
     foreach($content as $file) {
-        if($file=="." || $file==".." || $file==__FILE__) {
+        if($file=="." || $file==".." || $file=="_testing.php" || $file==__FILE__) {
             continue;
         }
         else {
@@ -102,7 +103,7 @@ namespace lib;
   function loadPHP($directory) {  
     $content = scandir($directory);  
     foreach($content as $file) {
-        if($file=="." || $file==".." || $file==__FILE__) {
+        if($file=="." || $file==".." || $file=="_testing.php" || $file==__FILE__) {
             continue;
         }
         else {
@@ -112,4 +113,5 @@ namespace lib;
         }
     }    
   }
+}
 ?>

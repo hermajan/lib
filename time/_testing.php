@@ -3,13 +3,13 @@
  * Testing file for methods in module Time
  * 
  * @author DJohnny
- * @version 13.10.2012
+ * @version 12.12.2012
  */
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <?php require_once '../loading.php'; loadLoader("."); ?>
+        <?php require_once '_loader.php'; ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Testing Time</title>
     </head>
