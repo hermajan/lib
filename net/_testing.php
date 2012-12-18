@@ -3,7 +3,7 @@
  * Testing file for methods in module Net.
  * 
  * @author DJohnny
- * @version 12.12.2012
+ * @version 18.12.2012
  */
 ?>
 <!DOCTYPE html>
@@ -15,9 +15,9 @@
     </head>
     <body>
 		<?php
-            echo \lib\Net\Net::getClientIP();
-
+            echo \lib\Net\Net::clientIP();            
             echo '<br>';
+            echo \lib\Net\Net::pageURL();
         ?>
     </body>
 </html>
