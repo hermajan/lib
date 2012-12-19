@@ -5,7 +5,7 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File time/english/English.php | lib</title>
+	<title>File Lib.php | lib</title>
 
 	<script type="text/javascript" src="resources/combined.js?3008458700"></script>
 	<script type="text/javascript" src="elementlist.js?3014309675"></script>
@@ -26,7 +26,7 @@
 						<ul>
 				<li><a href="namespace-lib.Net.html">Net</a>
 						</li>
-				<li class="active"><a href="namespace-lib.Time.html">Time</a>
+				<li><a href="namespace-lib.Time.html">Time</a>
 						</li>
 							</ul></li>
 				<li><a href="namespace-None.html">None</a>
@@ -42,15 +42,10 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-lib.Time.Czech.html">Czech</a></li>
-				<li class="active"><a href="class-lib.Time.English.html">English</a></li>
-				<li><a href="class-lib.Time.Time.html">Time</a></li>
+				<li class="active"><a href="class-lib.Lib.html">Lib</a></li>
+				<li><a href="class-lib.Loading.html">Loading</a></li>
 			</ul>
 
-			<h3>Interfaces</h3>
-			<ul>
-				<li><a href="class-lib.Time.Language.html">Language</a></li>
-			</ul>
 
 
 
@@ -76,10 +71,10 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-lib.Time.html" title="Summary of lib\Time"><span>Namespace</span></a>
+				<a href="namespace-lib.html" title="Summary of lib"><span>Namespace</span></a>
 			</li>
 			<li>
-				<a href="class-lib.Time.English.html" title="Summary of lib\Time\English"><span>Class</span></a>
+				<a href="class-lib.Lib.html" title="Summary of lib\Lib"><span>Class</span></a>
 			</li>
 		</ul>
 		<ul>
@@ -93,23 +88,23 @@
 
 <pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-comment">/**
-</span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * Handling with time in English.
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * Base class of Lib.
 </span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * 
 </span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * @author DJohnny
 </span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * @version 19.12.2012
 </span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> */</span>
-</span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-keyword1">namespace</span> lib\<span class="php-keyword2">Time</span>;
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-keyword1">namespace</span> lib;
 </span><span id="9" class="l"><a class="l" href="#9"> 9: </a>
-</span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-keyword1">class</span> <a id="English" href="#English">English</a> <span class="php-keyword1">implements</span> Language {
-</span><span id="11" class="l"><a class="l" href="#11">11: </a>  <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_timeWords" href="#_timeWords">timeWords</a>() {
-</span><span id="12" class="l"><a class="l" href="#12">12: </a>    \lib\Loading::loadJS(LIB_DIR.<span class="php-quote">&quot;/time/english/clock.js&quot;</span>);
-</span><span id="13" class="l"><a class="l" href="#13">13: </a>    <span class="php-keyword1">echo</span> <span class="php-quote">&quot;&lt;body onload='timeWords();'&gt;&quot;</span>;
-</span><span id="14" class="l"><a class="l" href="#14">14: </a>     <span class="php-keyword1">echo</span> <span class="php-quote">&quot;&lt;span id='time'&gt;00:00:00&lt;/span&gt;&quot;</span>;
-</span><span id="15" class="l"><a class="l" href="#15">15: </a>    <span class="php-keyword1">echo</span> <span class="php-quote">&quot;&lt;/body&gt;&quot;</span>;
-</span><span id="16" class="l"><a class="l" href="#16">16: </a>  }
-</span><span id="17" class="l"><a class="l" href="#17">17: </a>  <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_dayOfWeek" href="#_dayOfWeek">dayOfWeek</a>() {
-</span><span id="18" class="l"><a class="l" href="#18">18: </a>    \lib\Loading::loadJS(LIB_DIR.<span class="php-quote">&quot;/time/english/date.js&quot;</span>);
-</span><span id="19" class="l"><a class="l" href="#19">19: </a>    <span class="php-keyword1">echo</span> <span class="php-quote">&quot;&lt;script type='text/javascript'&gt;dayOfWeek();&lt;/script&gt;&quot;</span>;
+</span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-keyword1">class</span> <a id="Lib" href="#Lib">Lib</a> {
+</span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment">/**
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> * Lib constructor.
+</span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment"> */</span>
+</span><span id="14" class="l"><a class="l" href="#14">14: </a>  <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>() {
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>    <span class="php-var">$json</span>=<span class="php-keyword2">json_decode</span>(<span class="php-keyword2">file_get_contents</span>(__DIR__.<span class="php-quote">&quot;/_config.json&quot;</span>),<span class="php-keyword1">false</span>);
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>    
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>    @<span class="php-keyword2">define</span>(<span class="php-quote">&quot;LIB_DIR&quot;</span>,<span class="php-var">$json</span>-&gt;lib_dir);
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>    
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>    <span class="php-keyword1">require_once</span> __DIR__.<span class="php-quote">&quot;/Loading.php&quot;</span>;
 </span><span id="20" class="l"><a class="l" href="#20">20: </a>  }
 </span><span id="21" class="l"><a class="l" href="#21">21: </a>}
 </span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="xlang">?&gt;</span>

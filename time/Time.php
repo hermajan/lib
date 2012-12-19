@@ -3,7 +3,7 @@
  * Handling with time.
  * 
  * @author DJohnny
- * @version 13.10.2012
+ * @version 19.12.2012
  */
 namespace lib\Time;
 
@@ -12,11 +12,12 @@ class Time {
     //private $nowDate=(string)date("d.m.Y");
     
     /**
-     * Writes date by Javascript function.
+     * Writes date by JavaScript function.
      * 
-     * @return text Date in format <day>.<month>.<year>
+     * @return string Date in format <day>.<month>.<year>.
      */
     public function dateJS() {
+        \lib\Loading::loadJS(LIB_DIR."/time/date.js");
         echo "<script type='text/javascript'>dateJS();</script>";
     } 
 }
