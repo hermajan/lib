@@ -1,7 +1,6 @@
 <?php 
-require_once dirname(__DIR__).'/Loading.php';
+require_once dirname(__DIR__)."/Lib.php"; new \lib\Lib();
 
-if(basename(dirname($_SERVER["REQUEST_URI"]))=="geo") { \lib\Loading::loadJS("."); }
-else { \lib\Loading::loadJS("http://test.hermajan.net/lib/geo"); }
-\lib\Loading::loadPHP(__DIR__);
+\lib\Loading::loadJS(LIB_DIR."/geo/geolocation.js");
+\lib\Loading::loadPHPfiles(__DIR__);
 ?>
