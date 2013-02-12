@@ -1,10 +1,11 @@
 <?php
 require_once dirname(__DIR__)."/Lib.php"; new \lib\Lib();
 
-\lib\Loading::loadJS(LIB_DIR."/time/clock.js");
-\lib\Loading::loadPHPfiles(__DIR__);
+$loading=new \lib\Loading();
+$loading->loadJS(LIB_DIR."/time/clock.js");
+$loading->loadPHPfiles(__DIR__);
 
 // Load folders with languages
-\lib\Loading::loadPHPfiles(__DIR__."/czech");
-\lib\Loading::loadPHPfiles(__DIR__."/english");
+$loading->loadPHPfiles(__DIR__."/czech");
+$loading->loadPHPfiles(__DIR__."/english");
 ?>

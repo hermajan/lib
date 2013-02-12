@@ -1,5 +1,5 @@
 <?php 
 require_once dirname(__DIR__)."/Lib.php"; new \lib\Lib();
 
-\lib\Loading::loadPHPfiles(__DIR__);
+$loading=new \lib\Loading(); $loading->loadPHPfiles(__DIR__);
 ?>
