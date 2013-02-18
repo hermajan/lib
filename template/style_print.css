@@ -1,0 +1,34 @@
+/**
+ * Layout of elements in the template for printing.
+ */
+
+.page {
+  margin: 0px;
+  padding: 1px;
+  border: none;
+}
+  
+.header {
+  display: none;
+}
+  
+.logo {
+  display: none;
+}
+
+.leftside {
+  display: none;
+}
+
+.section {
+  display: none;
+}
+
+.rightside {
+  padding: 10px 10px 10px 10px;
+  margin: 0px 2px 0px 2px;
+}
+
+.footer {
+  display: none;
+}
