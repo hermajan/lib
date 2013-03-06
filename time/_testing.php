@@ -3,7 +3,7 @@
  * Testing file for methods in module Time
  * 
  * @author DJohnny
- * @version 12.12.2012
+ * @version 07.03.2013
  */
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,9 @@
     </head>
     <body>
         <?php
-            \lib\Time\Time::dateJS();    
+            $time=new \lib\Time\Time();
+            echo $time->datePHP().'<br>'; 
+            $time->timeJS();
             echo '<br>';
             \lib\Time\Czech::timeWords();
             echo '<br>';
