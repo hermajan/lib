@@ -1,28 +1,24 @@
-<?php
-/**
- * Testing file for methods in Lib.
- * 
- * @author DJohnny
- * @version 18.12.2012
- */
-?>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>Testing Lib</title>
-    <?php require_once '_loader.php'; ?>
+    <?php require_once "_loader.php"; ?>
   </head>
   <body>
-    <?php echo factorial(4)."<br>".factorial(-1)."<hr>".mocnina(2,1.75); ?>
-    <hr> 
-    <?php echo \lib\Time\Czech::timeWords();
-    echo "<hr><br>".poslaniEmailu("franta@seznam.cz", "ahoj");?>
-    <hr>
     <?php 
-      folderContentWithoutDots("time");echo "<hr>";
-     
-      echo \lib\Net\Net::clientIP();
+		folderContentWithoutDots("net"); echo "<br>";
+	  
+		$g=new Gravatar("MyEmailAddress@example.com");
+		echo $g->createImgTag();
+        $g->setDefault("mm");
+		$g->useDefault();
+        echo $g->createImgTag(); echo "<br>";
+        
+        $t=new Twitter();
+        echo $t->tweetByID("539790403290271744");
+        echo $t->tweetByURL("https://twitter.com/jack/status/20");
+        echo $t->lastTweet("DJohnny");
     ?>
   </body>
 </html>
