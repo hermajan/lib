@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+    <title>Actions</title>
+  </head>
+  <body>
+	<a href="javascript:location.href='index.html'">href</a>
+	<script type='text/javascript'>document.write(location.href);</script><br><br>
+
+	<input id="num" type="number" onchange="document.getElementById('go').innerHTML = document.getElementById('num').value">
+	<button onclick="window.history.go(document.getElementById('num').value)">
+		Go <span id="go"></span> pages in history
+	</button><hr>
+	
+	<a href="javascript:history.back(1)">Back</a>
+	<a href="javascript:location.reload()">Reload</a>
+	<a href="javascript:history.forward(1)">Forward</a><hr>
+	
+	<a href="javascript:window.print()">Print</a><br>
+	<a href="mailto:lionel@richie.com?subject=Hello&body=Is it me, you're looking for?&cc=someone@email.com&bcc=address@email.com">mailto</a>
+  </body>
+</html>

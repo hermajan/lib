@@ -1,28 +1,23 @@
 <?php
 /**
  * Working with internet related things.
- * 
- * @author DJohnny
- * @version 18.12.2012
  */
 namespace lib\Net;
 
 class Net {
   /**
    * Returns client IP address.
-   * 
    * @return string IP address
    */
-  public function clientIP() {
+  public static function clientIP() {
     return $_SERVER['REMOTE_ADDR'];
   }
   
   /**
  * Returns URL of page, where function is called.
- * 
  * @return string URL of page
  */
-  public function pageURL() {
+  public static function pageURL() {
 	$URL="http"; 
     if(!empty($_SERVER["HTTPS"]) && $_SERVER["HTTPS"]=="on") { $URL.="s"; }
 	$URL.="://".$_SERVER["SERVER_NAME"];
