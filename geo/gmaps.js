@@ -9,7 +9,9 @@ function showGMap(position, id) {
     var options = {
 		center: latlon, zoom: 15
     };
-    
-    var map = new google.maps.Map(document.getElementById(id), options);
+	
+	var element = document.getElementById(id);
+	element.style = "height: 250px; width: 500px;";
+    var map = new google.maps.Map(element, options);
     var marker = new google.maps.Marker({position: latlon, map: map, title: latlon.lat + " " + latlon.lng});
 }

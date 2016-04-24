@@ -9,23 +9,15 @@
 	<script src="gmaps.js"></script>
   </head>
   <body>
+	<div id="map"></div>
+	<div id="geolocation"></div>
+	
     <script type="text/javascript">
 		locate(function(position) {
 			showGMap(position, "map");
-		});
+		}, false);
 		
-        locate(function(position) { 
-			pos = returnPosition(position);	
-			text = ["latitude ", "longitude", "accuracy", "altitude", "altitude accuracy", "heading", "speed", "timestamp"];
-			title = ["The latitude as decimal degrees.", "The longitude as decimal degrees.", "The accuracy of position in meters.", "The altitude in meters above the mean sea level.", "The altitude accuracy of position in meters.", "The heading as degrees clockwise from North.", "The speed in meters per second.", "The timestamp of the response."];
-			
-			for(var i = 0; i < pos.length; i++) {
-				document.getElementById('geolocation').innerHTML += "<span title='" + title[i] + "'>" + text[i] + ": "+ pos[i] + "</span><br>";
-			}
-		});
+        locate(showPosition, "geolocation");
     </script>
-	<div id="map" style="height: 250px; width: 500px;"></div>
-	
-	<div id="geolocation"></div>
   </body>
 </html>
