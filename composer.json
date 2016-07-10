@@ -2,5 +2,9 @@
     "name": "hermajan/lib",
     "description": "Library with functions for web applications.",
 	"homepage": "https://github.com/hermajan/lib",
-    "license": "MIT"
+    "license": "MIT",
+	"minimum-stability": "dev",
+	"autoload": {
+		"classmap": [""]
+	}
 }
