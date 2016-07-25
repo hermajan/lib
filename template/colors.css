@@ -3,17 +3,14 @@
  */
 body { background:lightgrey; color:black; }
 
-.page { background:white; color:black; } 
-.page a:link { color:blue; } .page a:visited { color:DarkViolet; } .page a:hover { color:red; }
+main { background:white; color:black; } 
+main a:link { color:blue; } main a:visited { color:DarkViolet; } main a:hover { color:red; }
 
-.logo { background:black; color:white; }
-.logo a:link { color:white; } .logo a:visited { color:white; } .logo a:hover { color:red; }
+header { background:black; color:white; }
+header a:link { color:white; } header a:visited { color:white; } header a:hover { color:red; }
 
-.header { background:black; color:white; }
-.header a:link { color:white; } .header a:visited { color:white; } .header a:hover { color:red; }
-
-.leftside { background:black; color:black; }
-.leftside a:link { color:black; }.leftside a:visited { color:black; } .leftside a:hover { color:red; }
+nav { background:black; color:black; }
+nav a:link { color:black; } nav a:visited { color:black; } nav a:hover { color:red; }
 
 .section { background:#FFA700; color:black; }
 .section a:link { color:black; } .section a:visited { color:black; } .section a:hover { color:red; }
@@ -21,12 +18,8 @@ body { background:lightgrey; color:black; }
 .button { background:#FFCF73; color:black; }
 .button a:link { color:black; } .button a:visited { color:black; } .button a:hover { color:red; }
 
-.hidden { background:#FFCF73; color:black; }
-.hidden a:link { color:black; } .hidden a:visited { color:black; } .hidden a:hover { color:red; }
+article { background:white; color:black; }
+article a:link { color:blue; } article a:visited { color:DarkViolet; } article a:hover { color:red; }
 
-.rightside { background:white; color:black; }
-.rightside a:link { color:blue; } .rightside a:visited { color:DarkViolet; } .rightside a:hover { color:red; }
-
-.footer { background:black; color:white; }
-.footer a:link { color:white; } .footer a:visited { color:DarkViolet; } .footer a:hover { color:red; } 
-
+footer { background:black; color:white; }
+footer a:link { color:white; } footer a:visited { color:DarkViolet; } footer a:hover { color:red; } 

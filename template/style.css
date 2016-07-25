@@ -2,7 +2,7 @@
  * Layout of elements in the template.
  */
 
-.page {
+main {
 	margin: 1% 1% 1% 1%;
 	padding: 1px;
 	border: 2px solid #cc9;
@@ -10,7 +10,7 @@
 	-moz-border-radius: 15px;
 }
 
-.header {
+header {
 	height: 80px;
 	padding: 5px 5px 5px 10px;
 	margin: 2px 2px 0px 2px;
@@ -19,45 +19,48 @@
 	-moz-border-radius-topleft: 10px;
 	-moz-border-radius-topright: 10px;
 }
-.header h1 {
+header h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 }
-.header h1 a {
+header h1 a {
 	text-decoration: none;
 }
 
-.logo {
+.headerLeft {
 	float: left;
 }
-.logo img {
-	width: 200px; 
-	height: 80px; 
-	margin: 0px 10px 0px 0px;
-	border: 0px;
+
+.headerRight {
+	float: right;
 }
 
-.leftside {
+section {
+	display: flex;
+}
+
+nav {
 	float: left;		 
 	width: 20%;
 	max-width: 200px;
 	padding: 10px 2px 50px 2px;
 	margin: 0px 0px 0px 2px;
 	overflow: hidden;
+	flex: 1;
 }
-.leftside li {
+nav li {
 	list-style-type: none;
 }
 
-.section a:link, .button a:link, .hidden a:link {
+.section a:link, .button a:link {
 	text-decoration: none;
 }
-.section a:visited, .button a:visited, .hidden a:visited {
+.section a:visited, .button a:visited {
 	text-decoration: none;
 }
-.section a:hover, .button a:hover, .hidden a:hover {
+.section a:hover, .button a:hover {
 	text-decoration: none;
 }
 .section {
@@ -78,27 +81,18 @@
 	margin: 2px 2px 2px 2px;
 	border-radius: 5px; -moz-border-radius: 5px;
 }
-.button:hover,.hidden:hover {
+.button:hover {
 	border-style: inset;
 }
 
-.hidden {
-	display: none;
-	border-style: outset;
-	border-width: 1px;
-	margin: 1px 2px 1px 10px;
-	padding: 2px 2px 2px 2px;
-	border-radius: 5px; -moz-border-radius: 5px;
-	font-size: 90%;
-}
-
-.rightside {
+article {
 	overflow: auto;
 	padding: 10px 10px 10px 10px;
 	margin: 0px 2px 0px 0px;
+	flex: 2;
 }
 
-.footer {
+footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
