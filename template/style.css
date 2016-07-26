@@ -7,17 +7,14 @@ main {
 	padding: 1px;
 	border: 2px solid #cc9;
 	border-radius: 15px;
-	-moz-border-radius: 15px;
 }
 
 header {
-	height: 80px;
-	padding: 5px 5px 5px 10px;
+	height: 60px;
+	padding: 10px;
 	margin: 2px 2px 0px 2px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
 }
 header h1 {
 	display: flex;
@@ -42,10 +39,10 @@ section {
 }
 
 nav {
-	float: left;		 
+	float: left;
 	width: 20%;
 	max-width: 200px;
-	padding: 10px 2px 50px 2px;
+	padding: 2px;
 	margin: 0px 0px 0px 2px;
 	overflow: hidden;
 	flex: 1;
@@ -54,18 +51,13 @@ nav li {
 	list-style-type: none;
 }
 
-.section a:link, .button a:link {
-	text-decoration: none;
-}
-.section a:visited, .button a:visited {
-	text-decoration: none;
-}
-.section a:hover, .button a:hover {
-	text-decoration: none;
-}
 .section {
-	border-radius: 5px; -moz-border-radius: 5px;
-	padding: 5px 2px 2px 2px;
+	border-radius: 5px;
+	padding: 2px;
+}
+.section a {
+	display: block;
+	text-decoration: none;
 }
 
 .caption {
@@ -77,9 +69,12 @@ nav li {
 	border-style: outset;
 	border-width: 1px;
 	line-height: 110%;
-	padding: 2px 4px 2px 4px;
-	margin: 2px 2px 2px 2px;
-	border-radius: 5px; -moz-border-radius: 5px;
+	padding: 2px 4px;
+	margin: 2px;
+	border-radius: 5px;
+}
+.button a {
+	text-decoration: none;
 }
 .button:hover {
 	border-style: inset;
@@ -87,7 +82,8 @@ nav li {
 
 article {
 	overflow: auto;
-	padding: 10px 10px 10px 10px;
+	text-align: justify;
+	padding: 0px 15px;
 	margin: 0px 2px 0px 0px;
 	flex: 2;
 }
@@ -100,10 +96,8 @@ footer {
 	clear: both;
 	font-size: 80%;
 	height: 40px;
-	padding: 5px 5px 5px 5px;
+	padding: 5px;
 	margin: 0px 2px 2px 2px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-moz-border-radius-bottomright: 10px;
 }
