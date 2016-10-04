@@ -1,9 +1,9 @@
 <?php
+namespace Lib\Net;
+
 /**
  * Working with internet related things.
  */
-namespace lib\Net;
-
 class Net {
   /**
    * Returns client IP address.

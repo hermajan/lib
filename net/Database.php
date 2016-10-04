@@ -1,12 +1,9 @@
 <?php
+namespace Lib\Net;
+
 /**
  * Getting data from MySQL database.
- * 
- * @author DJohnny
- * @version 26.10.2012
  */
-namespace lib\Net;
-
 class Database {
     private $connection;
     

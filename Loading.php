@@ -1,9 +1,9 @@
 <?php
+namespace Lib;
+
 /**
  * Loading files from directories.
  */
-namespace lib;
-
 class Loading {
 /**
  * Loads cascading style sheet.

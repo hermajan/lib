@@ -1,4 +1,6 @@
 <?php
+namespace Lib;
+
 /**
  * Gravatar
  * @see https://en.gravatar.com/

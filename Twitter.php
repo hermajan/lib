@@ -1,4 +1,6 @@
 <?php
+namespace Lib;
+
 /**
  * Getting tweets from the Twitter.
  * @see https://dev.twitter.com/docs/embedded-tweets
