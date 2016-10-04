@@ -8,9 +8,10 @@ use mysqli;
 class Database {
     private $connection;
     
-    public function __construct($server,$user,$password,$database) {
-        $this->connection = $this->connect($server,$user,$password,$database);
-    }
+	public function __construct($configFile) {
+		$ini = parse_ini_file($configFile);
+		$this->connect($ini["server"], $ini["user"], $ini["password"], $ini["database"]);
+	}
     public function __destruct() {
         $this->connection->close();
     }
