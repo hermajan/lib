@@ -6,7 +6,7 @@ use Doctrine\DBAL\Connection;
 /**
  * Getting data from MySQL database via Doctrine.
  */
-class Doctrine {
+class Doctrine extends Database {
 	private $connection, $parameters;
 	
 	public function getConnection() {
@@ -14,14 +14,12 @@ class Doctrine {
 	}
 	
 	public function __construct($configFile) {
-		$ini = parse_ini_file($configFile);
-		
-		$this->parameters = array(
-			"host" => $ini["server"], "dbname" => $ini["database"],
-			"user" => $ini["user"], "password" => $ini["password"],
-			"driver" => "pdo_mysql", "charset"  => "utf8",
+		$this->parameters = $this->configParser($configFile);
+		$this->parameters += array(
+			"driver" => "pdo_mysql", "charset" => "utf8",
 			"driverOptions" => array(1002 => "SET NAMES UTF8")
 		);
+		
 		$this->connect($this->parameters);
 	}
 	public function __destruct() {

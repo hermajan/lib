@@ -4,12 +4,16 @@ namespace Lib\Database;
 /**
  * Getting data from MySQL database via MySQLi.
  */
-class Mysqli {
-	private $connection;
+class Mysqli extends Database {
+	private $connection, $parameters;
 	
 	public function __construct($configFile) {
-		$ini = parse_ini_file($configFile);
-		$this->connect($ini["server"], $ini["user"], $ini["password"], $ini["database"]);
+		$this->parameters = $this->configParser($configFile);
+		
+		$this->connect(
+			$this->parameters["host"], $this->parameters["user"],
+			$this->parameters["password"], $this->parameters["dbname"]
+		);
 	}
 	public function __destruct() {
 		$this->connection->close();
