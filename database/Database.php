@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Net;
+namespace Lib\Database;
 use mysqli;
 
 /**
