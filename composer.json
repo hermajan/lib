@@ -1,10 +1,17 @@
 {
-    "name": "hermajan/lib",
-    "description": "Library with functions for web applications.",
-	"homepage": "https://github.com/hermajan/lib",
-    "license": "MIT",
+	"name": "hermajan/lib",
+	"description": "Library with functions for web applications.",
+	"type": "library",
+	"homepage": "https://hermajan.net/lib",
+	"support": {
+		"issues": "https://github.com/hermajan/lib/issues"
+	},
+	"license": "MIT",
 	"minimum-stability": "dev",
 	"autoload": {
 		"classmap": [""]
+	},
+	"suggest": {
+		"doctrine/dbal": "For working with databases in Doctrine class."
 	}
 }
