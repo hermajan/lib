@@ -1,7 +1,7 @@
 <?php
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__."/../libs/autoload.php";
 
 Tester\Environment::setup();
-date_default_timezone_set('Europe/Prague');
+date_default_timezone_set("Europe/Prague");
 
-define('TMP_DIR', '/temp');
+define("TMP_DIR", "/temp");

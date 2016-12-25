@@ -11,6 +11,9 @@
 	"autoload": {
 		"classmap": [""]
 	},
+	"config": {
+		"vendor-dir": "libs"
+	},
 	"suggest": {
 		"doctrine/dbal": "For working with databases in Doctrine class."
 	},
