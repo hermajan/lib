@@ -19,8 +19,14 @@
 .fa-lastfm, .fa-lastfm-square { color: #e31b23; }
 .fa-lastfm:hover, .fa-lastfm-square:hover { color: inherit; }
 
+.fa-linkedin, .fa-linkedin-square { color: #0077b5; }
+.fa-linkedin:hover, .fa-linkedin-square:hover { color: inherit; }
+
 .fa-steam, .fa-steam-square { color: black; }
 .fa-steam:hover, .fa-steam-square:hover { color: #67c1f5; }
+
+.fa-soundcloud { color: #f50; }
+.fa-soundcloud:hover { color: inherit; }
 
 .fa-twitter, .fa-twitter-square { color: #55acee; }
 .fa-twitter:hover, .fa-twitter-square:hover { color: inherit; }

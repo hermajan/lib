@@ -12,12 +12,16 @@
 		"classmap": [""]
 	},
 	"config": {
-		"vendor-dir": "libs"
+		"vendor-dir": "libs",
+		"sort-packages": true,
+		"optimize-autoloader": true
 	},
 	"suggest": {
-		"doctrine/dbal": "For working with databases in Doctrine class."
+		"doctrine/dbal": "For working with databases in Doctrine class.",
+		"fortawesome/font-awesome": "For changing color of Font Awesome icons with facolors.css."
 	},
 	"require-dev": {
+		"fortawesome/font-awesome": "^4.7",
 		"nette/tester": "^1.7"
 	}
 }

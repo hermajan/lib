@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Font Awesome colors</title>
+		<link rel="stylesheet" href="../libs/fortawesome/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../src/facolors.css">
+	</head>
+	<body>
+<ul style="list-style-type: none;">
+	<li title="Facebook">
+		<i class="fa-facebook"></i>
+		<i class="fa-facebook-f"></i>
+		<i class="fa-facebook-official"></i>
+		<i class="fa-facebook-square"></i>
+	</li>
+
+	<li title="Foursquare">
+		<i class="fa-foursquare"></i>
+	</li>
+
+	<li title="GitHub">
+		<i class="fa-github"></i>
+		<i class="fa-github-alt"></i>
+		<i class="fa-github-square"></i>
+	</li>
+
+	<li title="Google+">
+		<i class="fa-google-plus"></i>
+		<i class="fa-google-plus-circle"></i>
+		<i class="fa-google-plus-official"></i>
+		<i class="fa-google-plus-square"></i>
+	</li>
+
+	<li title="IMDb">
+		<i class="fa-imdb"></i>
+	</li>
+
+	<li title="Last.fm">
+		<i class="fa-lastfm"></i>
+		<i class="fa-lastfm-square"></i>
+	</li>
+
+	<li title="LinkedIn">
+		<i class="fa-linkedin"></i>
+		<i class="fa-linkedin-square"></i>
+	</li>
+
+	<li title="SoundCloud">
+		<i class="fa-soundcloud"></i>
+	</li>
+
+	<li title="Steam">
+		<i class="fa-steam"></i>
+		<i class="fa-steam-square"></i>
+	</li>
+
+	<li title="Twitter">
+		<i class="fa-twitter"></i>
+		<i class="fa-twitter-square"></i>
+	</li>
+
+	<li title="Wikipedia">
+		<i class="fa-wikipedia-w"></i>
+	</li>
+
+	<li title="Youtube">
+		<i class="fa-youtube"></i>
+		<i class="fa-youtube-play"></i>
+		<i class="fa-youtube-square"></i>
+	</li>
+</ul>
+
+<script>
+	icons = document.getElementsByTagName("i");
+	for(i=0; i<icons.length; i++) {
+		icons[i].setAttribute("title", icons[i].className);
+		icons[i].classList.add("fa", "fa-2x");
+	}
+</script>
+	</body>
+</html>
