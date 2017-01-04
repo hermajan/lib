@@ -13,7 +13,7 @@ abstract class Database {
 	public function configParser($configFile) {
 		$ini = parse_ini_file($configFile, true);
 		
-		switch($_SERVER['SERVER_NAME']) {
+		switch($_SERVER["SERVER_NAME"]) {
 			case "localhost":
 				$params = $ini["Localhost"];
 				break;

@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/_testSetup.php';
+require __DIR__."/_testSetup.php";
 use Tester\Assert;
 
 /**

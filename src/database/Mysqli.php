@@ -3,6 +3,7 @@ namespace Lib\Database;
 
 /**
  * Getting data from MySQL database via MySQLi.
+ * @deprecated Use Doctrine.
  */
 class Mysqli extends Database {
 	private $connection, $parameters;
