@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Testing Geolocation</title>
+		<script type="text/javascript" src="../../src/geo/geolocation.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiV2nqBqcViAbBYIAVwvSzsHdUB187IIg"></script>
+		<script src="../../src/geo/gmaps.js"></script>
+	</head>
+	<body>
+<div id="map"></div>
+<div id="geolocation"></div>
+
+<script type="text/javascript">
+	locate(function(position) {
+		showGMap(position, "map");
+	}, false);
+	
+	locate(showPosition, "geolocation");
+</script>
+	</body>
+</html>

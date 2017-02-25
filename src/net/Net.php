@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Net;
+namespace Lib\net;
 
 /**
  * Working with internet related things.

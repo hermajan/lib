@@ -1,4 +1,4 @@
-<?php 
+<?php
 $src = __DIR__."/../src";
 require_once $src."/Lib.php"; new Lib\Lib();
 

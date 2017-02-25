@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Database;
+namespace Lib\database;
 
 /**
  * Getting data from MySQL database via MySQLi.

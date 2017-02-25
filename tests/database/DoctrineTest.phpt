@@ -1,7 +1,7 @@
 <?php
 require __DIR__."/../_testSetup.php";
 use Tester\Assert;
-use \Lib\Database\Doctrine as DB;
+use \Lib\database\Doctrine as DB;
 
 /**
  * Tests class Doctrine.

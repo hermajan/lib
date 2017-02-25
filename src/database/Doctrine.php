@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Database;
+namespace Lib\database;
 use Doctrine\DBAL as dbal;
 use Doctrine\DBAL\Connection;
 

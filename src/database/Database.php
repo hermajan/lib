@@ -1,5 +1,5 @@
 <?php
-namespace Lib\Database;
+namespace Lib\database;
 
 /**
  * Database.
