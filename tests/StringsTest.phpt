@@ -16,7 +16,7 @@ class StringsTest extends Tester\TestCase {
 	public function testStartsWith() {
 		Assert::true(\Lib\Strings::startsWith($this->string, "he"));
 		Assert::false(\Lib\Strings::startsWith($this->string, "el"));
-}
+	}
 
 	public function testEndsWith() {
 		Assert::true(\Lib\Strings::endsWith($this->string, "lo"));
