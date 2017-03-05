@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8abf4b53165a08d1ab46f89ed131a1d7",
+    "content-hash": "088a6ac3a86e6c04428fc8ead9ba758d",
     "packages": [],
     "packages-dev": [
         {
@@ -526,6 +526,68 @@
             "time": "2016-10-24T15:52:54+00:00"
         },
         {
+            "name": "nette/nette-minified",
+            "version": "v2.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/nette-minified.git",
+                "reference": "20405b666ed720f8fa22f602341ac5b07d2bf64b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/nette-minified/zipball/20405b666ed720f8fa22f602341ac5b07d2bf64b",
+                "reference": "20405b666ed720f8fa22f602341ac5b07d2bf64b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "ext-session": "*",
+                "ext-tokenizer": "*",
+                "php": ">=5.6.0"
+            },
+            "replace": {
+                "nette/nette": "2.4.*"
+            },
+            "suggest": {
+                "ext-fileinfo": "to detect type of files",
+                "ext-gd": "to use Nette\\Utils\\Image",
+                "ext-iconv": "to use Nette\\Utils\\Strings::webalize() and toAscii()",
+                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Nette\\Utils\\Strings::lower(), latte filters lower, upper, capitalize, etc...",
+                "ext-pdo_sqlite": "to use SQLiteStorage or SQLiteJournal",
+                "ext-xml": "to use Nette\\Utils\\Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "nette.phar"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Minified version of Nette Framework.",
+            "homepage": "http://nette.org",
+            "abandoned": "nette/nette",
+            "time": "2017-01-19T12:02:29+00:00"
+        },
+        {
             "name": "nette/tester",
             "version": "v1.7.1",
             "source": {
@@ -580,6 +642,57 @@
                 "unit"
             ],
             "time": "2016-03-19T14:34:02+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v3.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+                "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ],
+            "time": "2016-07-25T15:51:55+00:00"
         }
     ],
     "aliases": [],

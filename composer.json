@@ -22,6 +22,8 @@
 	"require-dev": {
 		"doctrine/dbal": "~2.4",
 		"fortawesome/font-awesome": "^4.7",
-		"nette/tester": "^1.7"
+		"nette/tester": "^1.7",
+		"nette/nette-minified": "^2.4",
+		"twbs/bootstrap": "^3.3"
 	}
 }
