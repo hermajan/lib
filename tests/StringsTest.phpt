@@ -22,6 +22,12 @@ class StringsTest extends Tester\TestCase {
 		Assert::true(\Lib\Strings::endsWith($this->string, "lo"));
 		Assert::false(\Lib\Strings::endsWith($this->string, "el"));
 	}
+	
+	public function testIssetor() {
+		Assert::equal(\Lib\Strings::issetor($this->string), "hello");
+		$null = null;
+		Assert::equal(\Lib\Strings::issetor($null), "");
+	}
 }
 
 $testCase = new StringsTest;

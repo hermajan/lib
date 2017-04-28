@@ -24,4 +24,13 @@ class Strings {
 	public static function endsWith($haystack, $needle) {
 		return (substr($haystack, -strlen($needle)) === $needle);
 	}
+
+	/**
+	 * Returns string if it is set.
+	 * @param $var mixed String to check.
+	 * @return mixed String if it is set or empty string.
+	 */
+	public static function issetor(&$var) {
+		return isset($var) ? $var : "";
+	}
 }
