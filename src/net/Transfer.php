@@ -13,6 +13,11 @@ class Transfer {
 	 */
 	public static function download($url, $output, $verbose=false) {
 		$curl = curl_init($url);
+		
+		$dirname = dirname($output);
+		if(!is_dir($dirname)) {
+			mkdir($dirname, 0755, true);
+		}
 		$file = fopen($output, "w");
 
 		if($verbose == true) {
