@@ -10,7 +10,11 @@ class AdminerTest extends Tester\TestCase {
 	private $folder;
 	
 	public function __construct() {
-		Tester\Environment::lock("adminer", $this->folder);
+		$folder = __DIR__."/../.temp";
+		if(!is_dir($folder)) {
+			mkdir($folder, 0777, true);
+		}
+		Tester\Environment::lock("adminer", $folder);
 	}
 
 	public function setUp() {
