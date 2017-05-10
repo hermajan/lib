@@ -22,7 +22,7 @@ class AdminerTest extends Tester\TestCase {
 	}
 
 	public function testDownloadFull() {
-		\Lib\Adminer::download();
+		\Lib\Adminer::download(__DIR__);
 		Assert::true(file_exists("adminer.php"));
 		unlink("adminer.php");
 	}

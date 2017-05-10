@@ -18,15 +18,15 @@ class Adminer {
 		if($czech == true) { $url .= "-cs"; }
 		$url .= ".php";
 		
-		\Lib\Net\Transfer::download($url, $folder."adminer-location.html", $verbose);
+		\Lib\net\Transfer::download($url, $folder."/adminer-location.html", $verbose);
 		
 		$dom = new \DOMDocument;
-		$dom->loadHTMLFile($folder."adminer-location.html");
+		$dom->loadHTMLFile($folder."/adminer-location.html");
 		$links = $dom->getElementsByTagName("a");
 		$location = $links[0]->getAttribute("href");
 		$url = "https://www.adminer.org/".$location;
 		
-		\lib\Net\Transfer::download($url, $folder."adminer.php", $verbose);
-		unlink($folder."adminer-location.html");
+		\lib\net\Transfer::download($url, $folder."/adminer.php", $verbose);
+		unlink($folder."/adminer-location.html");
 	}
 }
