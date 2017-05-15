@@ -22,17 +22,4 @@
       }
     }
  }
-
- function folderContent($folder) {  
-    $content = scandir($folder);  
-    foreach($content as $file) { echo "<a href='".$folder."/".$file."'>".$file."</a><br>"; }    
- }
- function folderContentWithoutDots($folder) {  
-    $content = scandir($folder);  
-	foreach($content as $file) { 
-		if(strcmp($file,".")!=0 AND strcmp($file,"..")!=0) {
-			echo "<a href='".$folder."/".$file."'>".$file."</a><br>"; 
-		}
-	}
- }
 ?>

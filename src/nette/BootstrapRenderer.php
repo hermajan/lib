@@ -28,7 +28,7 @@ class BootstrapRenderer extends DefaultFormRenderer {
 			".error" => "has-error"
 		],
 		"control" => [
-			"container" => "span class=col-sm-8",
+			"container" => "span class=col-sm-10",
 			".odd" => null,
 			"description" => "span class=help-block",
 			"requiredsuffix" => "",
@@ -43,7 +43,7 @@ class BootstrapRenderer extends DefaultFormRenderer {
 			".button" => "btn btn-default"
 		],
 		"label" => [
-			"container" => "span class='col-sm-4 control-label'",
+			"container" => "span class='col-sm-2 control-label'",
 			"suffix" => null,
 			"requiredsuffix" => ""
 		],
