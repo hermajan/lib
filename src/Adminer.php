@@ -2,7 +2,8 @@
 namespace Lib;
 
 /**
- * Methods for working with Adminer (https://www.adminer.org).
+ * Methods for working with Adminer.
+ * @see https://www.adminer.org
  */
 class Adminer {
 	/**

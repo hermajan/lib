@@ -2,7 +2,7 @@
 namespace Lib\services;
 
 /**
- * Gravatar
+ * Getting images from Gravatar.
  * @see https://en.gravatar.com/
  */
 class Gravatar {
@@ -35,25 +35,25 @@ class Gravatar {
 	
 	/**
 	 * Gravatar constructor.
-	 * @param string Email for getting a gravatar image.
+	 * @param string $email for getting a Gravatar image.
 	 */
 	public function __construct($email) {
-		$this->email=$email;
-		$this->forceDefault=FALSE;
+		$this->email = $email;
+		$this->forceDefault = false;
 	}
 	
 	public function getEmail() { return $this->email; }
-	public function setEmail($email) { $this->email=$email; }
+	public function setEmail($email) { $this->email = $email; }
 	public function getSize() { return $this->size; }
-	public function setSize($size) { $this->size=$size; }
+	public function setSize($size) { $this->size = $size; }
 	public function getDefault() { return $this->default; }
-	public function setDefault($default) { $this->default=$default; }
+	public function setDefault($default) { $this->default = $default; }
 	public function getRating() { return $this->rating; }
-	public function setRating($rating) { $this->rating=$rating; }
+	public function setRating($rating) { $this->rating = $rating; }
 	
-	public function useDefault() { 
-	  if($this->forceDefault==FALSE) { $this->forceDefault=TRUE; }
-	  else { $this->forceDefault=FALSE; }
+	public function useDefault() {
+		if($this->forceDefault == false) { $this->forceDefault = true; } 
+		else { $this->forceDefault = false; }
 	}
 	
 	/**
@@ -68,15 +68,15 @@ class Gravatar {
 	 * @return string Image URL.
 	 */
 	public function createURL() {
-		$url="https://secure.gravatar.com/avatar/".$this->createHash();
-		$url=$url."?s=".$this->size."&d=".$this->default."&r=".$this->rating;
+		$url = "https://secure.gravatar.com/avatar/".$this->createHash();
+		$url = $url."?s=".$this->size."&d=".$this->default."&r=".$this->rating;
 		
-		if($this->forceDefault==TRUE) { $url=$url.'&f=y'; }
+		if($this->forceDefault == true) { $url = $url.'&f=y'; }
 		return $url;
 	}
 	
 	/**
-	 * Returns HTML IMG tag with a gravatar image.
+	 * Returns HTML IMG tag with a Gravatar image.
 	 * @return string IMG tag.
 	 */
 	public function createImgTag() {

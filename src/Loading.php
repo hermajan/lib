@@ -11,7 +11,7 @@ class Loading {
 	 * @param string $media CSS media attribute.
 	 * @return string HTML <link> tag with loaded CSS file.
 	 */
-	function loadCSS($file, $media="all") {
+	public static function loadCSS($file, $media="all") {
 		if(preg_match("~css$~", $file)) {
 			return "<link rel='stylesheet' type='text/css' href='".$file."' media='".$media."'/>";
 		}
@@ -22,7 +22,7 @@ class Loading {
 	 * @param string $file JavaScript file, which will be loaded.
 	 * @return string HTML <script> tag with loaded file.
 	 */
-	function loadJS($file) {
+	public static function loadJS($file) {
 		if(preg_match("~js$~", $file)) {
 			return "<script type='text/javascript' src='".$file."'></script>";
 		}
@@ -33,13 +33,12 @@ class Loading {
 	 * @param string $directory Directory from which will be loader loaded.
 	 * @return string Loaded loader.
 	 */
-	function loadLoader($directory) {
+	public static function loadLoader($directory) {
 		$content = scandir($directory);
 		foreach($content as $file) {
 			if($file=="." || $file==".." || $file==__FILE__) {
 				continue;
-			}
-			else {
+			} else {
 				if(preg_match("~_loader.php$~", $file)) {
 					require_once $directory."/".$file;
 				}
@@ -52,7 +51,7 @@ class Loading {
 	 * @param $file PHP file, which will be loaded.
 	 * @return string Loaded PHP file.
 	 */
-	function loadPHP($file) {
+	public static function loadPHP($file) {
 		require_once $file;
 	}
 	
@@ -62,14 +61,13 @@ class Loading {
 	 * @param array $skipped Array of files, which will be skipped from loading.
 	 * @return string List of loaded files.
 	 */
-	function loadPHPfiles($directory, $skipped=[]) {
+	public static function loadPHPfiles($directory, $skipped=[]) {
 		$content = scandir($directory);
 		foreach($content as $file) {
 			$defaults = [".", ".."];
 			if(in_array($file, $defaults) || in_array($file, $skipped)) {
 				continue;
-			}
-			else {
+			} else {
 				if(preg_match("~php$~", $file)) {
 					require_once $directory."/".$file;
 				}
@@ -83,7 +81,7 @@ class Loading {
 	 * @param array $skipped Array of files, which will be skipped from loading.
 	 * @return string List of loaded files.
 	 */
-	function loadPHPfolders($directory, $skipped=[]) {
+	public static function loadPHPfolders($directory, $skipped=[]) {
 		$loading = new \Lib\Loading();
 		$loading->loadPHPfiles($directory, $skipped);
 		
@@ -92,8 +90,7 @@ class Loading {
 			$defaults = [".", ".."];
 			if(in_array($folder, $defaults) || in_array($folder, $skipped) || is_file($directory."/".$folder)) {
 				continue;
-			}
-			else {
+			} else {
 				$loading->loadPHPfiles($directory."/".$folder, $skipped);
 			}
 		}

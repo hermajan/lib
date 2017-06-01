@@ -1,6 +1,9 @@
 <?php
 namespace Lib;
 
+/**
+ * Validation of strings.
+ */
 class Validation {
 	/**
 	 * Checks if string is a valid Czech phone number.
