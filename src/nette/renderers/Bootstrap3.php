@@ -1,52 +1,25 @@
 <?php
-namespace Lib\nette;
+namespace Lib\nette\renderers;
 use Nette;
 use Nette\Forms\Controls;
 use Nette\Forms\Rendering\DefaultFormRenderer;
 
 /**
- * Bootstrap renderer for Nette Forms.
+ * Bootstrap 3 renderer for Nette Forms.
  */
-class BootstrapRenderer extends DefaultFormRenderer {
+class Bootstrap3 extends DefaultFormRenderer {
 	public $wrappers = [
 		"form" => ["container" => null],
-		"error" => [
-			"container" => "div class='alert alert-error'",
-			"item" => "p"
-		],
-		"group" => [
-			"container" => "fieldset",
-			"label" => "legend",
-			"description" => "p"
-		],
+		"error" => ["container" => "div class='alert alert-error'", "item" => "p"],
+		"group" => ["container" => "fieldset", "label" => "legend", "description" => "p"],
 		"controls" => ["container" => null],
-		"pair" => [
-			"container" => "div class=form-group",
-			".required" => "required",
-			".optional" => null,
-			".odd" => null,
-			".error" => "has-error"
-		],
-		"control" => [
-			"container" => "span class=col-sm-10",
-			".odd" => null,
-			"description" => "span class=help-block",
-			"requiredsuffix" => "",
-			"errorcontainer" => "span class=help-block",
-			"erroritem" => "",
-			".required" => "required",
-			".text" => "text",
-			".password" => "text",
-			".file" => "text",
-			".submit" => "btn btn-primary",
-			".image" => "btn",
-			".button" => "btn btn-default"
-		],
-		"label" => [
-			"container" => "span class='col-sm-2 control-label'",
-			"suffix" => null,
-			"requiredsuffix" => ""
-		],
+		"pair" => ["container" => "div class=form-group", ".required" => "required", ".optional" => null,
+			".odd" => null, ".error" => "has-error"],
+		"control" => ["container" => "span class=col-sm-10", ".odd" => null, "description" => "span class=help-block",
+			"requiredsuffix" => "", "errorcontainer" => "span class=help-block", "erroritem" => "",
+			".required" => "required", ".text" => "text", ".password" => "text", ".file" => "text",
+			".submit" => "btn btn-primary", ".image" => "btn", ".button" => "btn btn-default"],
+		"label" => ["container" => "span class='col-sm-2 control-label'", "suffix" => null, "requiredsuffix" => ""],
 		"hidden" => ["container" => null]
 	];
 	
