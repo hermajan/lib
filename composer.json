@@ -19,6 +19,9 @@
 		"doctrine/dbal": "For working with databases in Doctrine class.",
 		"fortawesome/font-awesome": "For changing color of Font Awesome icons with facolors.css."
 	},
+	"require": {
+		"php": "^7.0"
+	},
 	"require-dev": {
 		"doctrine/dbal": "~2.4",
 		"fortawesome/font-awesome": "^4.7",
