@@ -2,29 +2,32 @@
 	"name": "hermajan/lib",
 	"description": "Library with functions for web applications.",
 	"type": "library",
+	"license": "MIT",
+	
 	"homepage": "https://hermajan.net/lib",
 	"support": {
 		"issues": "https://github.com/hermajan/lib/issues"
 	},
-	"license": "MIT",
+	
 	"autoload": {
 		"classmap": [""]
 	},
+	
 	"config": {
-		"vendor-dir": "libs",
+		"vendor-dir": "vendor",
 		"sort-packages": true,
 		"optimize-autoloader": true
 	},
+	
 	"suggest": {
-		"doctrine/dbal": "For working with databases in Doctrine class.",
-		"fortawesome/font-awesome": "For changing color of Font Awesome icons with facolors.css."
+		"doctrine/dbal": "For working with databases in Doctrine class."
 	},
+	
 	"require": {
 		"php": "^7.0"
 	},
 	"require-dev": {
-		"doctrine/dbal": "~2.4",
-		"fortawesome/font-awesome": "^4.7",
+		"doctrine/dbal": "~2.4.0",
 		"nette/tester": "^1.7"
 	}
 }

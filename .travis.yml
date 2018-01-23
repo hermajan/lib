@@ -17,7 +17,7 @@ install:
 
 script:
   - mysql < ./tests/database/testing.sql -u root
-  - ./libs/bin/tester -s ./tests/
+  - ./vendor/bin/tester -s ./tests/
 
 allow_failures:
   - php: nightly

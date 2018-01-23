@@ -1,7 +1,7 @@
 /nbproject/
 /.idea/
 /.temp/
-/libs/
-/api/
 /docs/
 /node_modules/
+/vendor/
+*.lock
