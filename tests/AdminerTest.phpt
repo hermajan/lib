@@ -1,12 +1,14 @@
 <?php
-require __DIR__."/_testSetup.php";
-use Tester\Assert;
+require __DIR__."/bootstrap.php";
+
+use Lib\Adminer;
+use Tester\{Assert, Environment, TestCase};
 
 /**
  * Tests class Adminer.
  * @testCase
  */
-class AdminerTest extends Tester\TestCase {
+class AdminerTest extends TestCase {
 	private $folder;
 	
 	public function __construct() {
@@ -14,33 +16,33 @@ class AdminerTest extends Tester\TestCase {
 		if(!is_dir($folder)) {
 			mkdir($folder, 0777, true);
 		}
-		Tester\Environment::lock("adminer", $folder);
+		Environment::lock("adminer", $folder);
 	}
-
+	
 	public function setUp() {
 		$this->folder = __DIR__."/../.temp/";
 	}
-
+	
 	public function testDownloadFull() {
-		\Lib\Adminer::download(__DIR__);
+		Adminer::download(__DIR__);
 		Assert::true(file_exists("adminer.php"));
 		unlink("adminer.php");
 	}
 	
 	public function testDownloadMySQL() {
-		\Lib\Adminer::download($this->folder, true);
+		Adminer::download($this->folder, true);
 		Assert::true(file_exists($this->folder."adminer.php"));
 		unlink($this->folder."adminer.php");
 	}
 	
 	public function testDownloadMySQLczech() {
-		\Lib\Adminer::download($this->folder, true, true);
+		Adminer::download($this->folder, true, true);
 		Assert::true(file_exists($this->folder."adminer.php"));
 		unlink($this->folder."adminer.php");
 	}
 	
 	public function testDownloadVerbose() {
-		\Lib\Adminer::download($this->folder, false, false, true);
+		Adminer::download($this->folder, false, false, true);
 		Assert::true(file_exists($this->folder."adminer.php"));
 		unlink($this->folder."adminer.php");
 	}

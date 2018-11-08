@@ -12,7 +12,9 @@ class Validation {
 	 */
 	public static function czechPhone($number) {
 		$match = preg_match("/^((\+420|00420) ?)?\d{3}( |)?\d{3}( |)?\d{3}$/", $number);
-		if($match === 1) { return true; }
+		if($match === 1) {
+			return true;
+		}
 		return false;
 	}
 }

@@ -1,10 +1,8 @@
 {
-	"name": "lib",
+	"name": "@hermajan/lib",
 	"description": "Library with functions for web applications.",
 	"license": "MIT",
 	"repository": "https://github.com/hermajan/lib",
 	"dependencies": {},
-	"devDependencies": {
-		"@fortawesome/fontawesome-free-webfonts": "^1.0.2"
-	}
+	"devDependencies": {}
 }

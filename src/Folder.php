@@ -19,7 +19,9 @@ class Folder {
 		$content = scandir($this->path);
 		foreach($content as $file) {
 			if($dots == false) {
-				if((strcmp($file, ".") == 0) or (strcmp($file, "..") == 0)) { continue; }
+				if((strcmp($file, ".") == 0) or (strcmp($file, "..") == 0)) {
+					continue;
+				}
 			}
 			echo "<a href='".$this->path."/".$file."'>".$file."</a><br>";
 		}

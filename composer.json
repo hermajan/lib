@@ -24,10 +24,11 @@
 	},
 	
 	"require": {
-		"php": "^7.0"
+		"php": "^7.0",
+		"ext-dom": "*",
+		"ext-json": "*"
 	},
 	"require-dev": {
-		"doctrine/dbal": "~2.4.0",
 		"nette/tester": "^1.7"
 	}
 }

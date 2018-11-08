@@ -16,7 +16,6 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
-  - mysql < ./tests/database/testing.sql -u root
   - ./vendor/bin/tester -s ./tests/
 
 allow_failures:

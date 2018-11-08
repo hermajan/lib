@@ -14,7 +14,7 @@ class Strings {
 	public static function startsWith($haystack, $needle) {
 		return (substr($haystack, 0, strlen($needle)) === $needle);
 	}
-
+	
 	/**
 	 * Checks if some string ends with a substring.
 	 * @param string $haystack String where to search.
@@ -24,7 +24,7 @@ class Strings {
 	public static function endsWith($haystack, $needle) {
 		return (substr($haystack, -strlen($needle)) === $needle);
 	}
-
+	
 	/**
 	 * Returns string if it is set.
 	 * @param $var mixed String to check.

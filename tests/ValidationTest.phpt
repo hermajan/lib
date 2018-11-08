@@ -1,25 +1,26 @@
 <?php
-require __DIR__."/_testSetup.php";
-use Tester\Assert;
-use \Lib\Validation as V;
+require __DIR__."/bootstrap.php";
+
+use Lib\Validation;
+use Tester\{Assert, TestCase};
 
 /**
  * Tests class Validation.
  * @testCase
  */
-class ValidationTest extends Tester\TestCase {
+class ValidationTest extends TestCase {
 	public function testCzechPhone() {
-		Assert::true(V::czechPhone("+420123456789"));
-		Assert::true(V::czechPhone("+420 123 456 789"));
-		Assert::true(V::czechPhone("00420123456789"));
-		Assert::true(V::czechPhone("00420 123 456 789"));
-		Assert::true(V::czechPhone("123456789"));
-		Assert::true(V::czechPhone("123 456 789"));
+		Assert::true(Validation::czechPhone("+420123456789"));
+		Assert::true(Validation::czechPhone("+420 123 456 789"));
+		Assert::true(Validation::czechPhone("00420123456789"));
+		Assert::true(Validation::czechPhone("00420 123 456 789"));
+		Assert::true(Validation::czechPhone("123456789"));
+		Assert::true(Validation::czechPhone("123 456 789"));
 		
-		Assert::false(V::czechPhone("hello"));
-		Assert::false(V::czechPhone("123w456789"));
-		Assert::false(V::czechPhone("123w56789"));
-		Assert::false(V::czechPhone("123a456a789"));
+		Assert::false(Validation::czechPhone("hello"));
+		Assert::false(Validation::czechPhone("123w456789"));
+		Assert::false(Validation::czechPhone("123w56789"));
+		Assert::false(Validation::czechPhone("123a456a789"));
 	}
 }
 

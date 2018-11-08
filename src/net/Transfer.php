@@ -1,5 +1,5 @@
 <?php
-namespace Lib\net;
+namespace Lib\Net;
 
 /**
  * Transfering files.

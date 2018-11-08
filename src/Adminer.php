@@ -1,6 +1,8 @@
 <?php
 namespace Lib;
 
+use Lib\Net\Transfer;
+
 /**
  * Methods for working with Adminer.
  * @see https://www.adminer.org
@@ -13,13 +15,17 @@ class Adminer {
 	 * @param bool $czech If true download only Czech version, false otherwise.
 	 * @param bool $verbose If true show verbose output, false otherwise.
 	 */
-	public static function download($folder="", $mysql=false, $czech=false, $verbose=false) {
+	public static function download($folder = "", $mysql = false, $czech = false, $verbose = false) {
 		$url = "https://www.adminer.org/latest";
-		if($mysql == true) { $url .= "-mysql"; }
-		if($czech == true) { $url .= "-cs"; }
+		if($mysql == true) {
+			$url .= "-mysql";
+		}
+		if($czech == true) {
+			$url .= "-cs";
+		}
 		$url .= ".php";
 		
-		\Lib\net\Transfer::download($url, $folder."/adminer-location.html", $verbose);
+		Transfer::download($url, $folder."/adminer-location.html", $verbose);
 		
 		$dom = new \DOMDocument;
 		$dom->loadHTMLFile($folder."/adminer-location.html");
@@ -27,7 +33,7 @@ class Adminer {
 		$location = $links[0]->getAttribute("href");
 		$url = "https://www.adminer.org/".$location;
 		
-		\lib\net\Transfer::download($url, $folder."/adminer.php", $verbose);
+		Transfer::download($url, $folder."/adminer.php", $verbose);
 		unlink($folder."/adminer-location.html");
 	}
 }
