@@ -20,7 +20,7 @@ function cypress() {
 # Runs PHPStan
 function phpstan() {
     echo -e "PHPStan"
-    ./vendor/bin/phpstan analyse app -c app/config/phpstan.neon
+    ./vendor/bin/phpstan analyse src -c tests/phpstan.neon
 }
 
 # Runs Nette Tester tests
@@ -33,7 +33,7 @@ function tester() {
 }
 
 function all() {
-#    phpstan
+    phpstan
     tester
 }
 

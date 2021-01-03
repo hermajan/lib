@@ -27,7 +27,7 @@ class Strings {
 	
 	/**
 	 * Returns string if it is set.
-	 * @param $var mixed String to check.
+	 * @param mixed $var String to check.
 	 * @return mixed String if it is set or empty string.
 	 */
 	public static function issetor(&$var) {

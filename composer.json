@@ -10,7 +10,7 @@
 	},
 	
 	"autoload": {
-		"classmap": [""]
+		"classmap": ["src"]
 	},
 	
 	"config": {
@@ -22,9 +22,11 @@
 	"require": {
 		"php": ">=7.1",
 		"ext-dom": "*",
-		"ext-json": "*"
+		"ext-json": "*",
+		"ext-curl": "*"
 	},
 	"require-dev": {
-		"nette/tester": "^2.3"
+		"nette/tester": "^2.3",
+		"phpstan/phpstan": "^0.12.64"
 	}
 }

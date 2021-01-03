@@ -6,21 +6,34 @@ namespace Lib\Services;
  * @see https://dev.twitter.com/docs/embedded-tweets
  */
 class Twitter {
+	/** @var string */
 	private $lang = "", $align = "";
 	
-	public function getLang() { return $this->lang; }
-	public function setLang($lang) { $this->lang = $lang; }
-	
-	public function getAlign() { return $this->align; }
-	public function setAlign($align) { $this->align = $align; }
-	
-	public function __construct($lang = "", $align = "") {
+	public function __construct(string $lang = "", string $align = "") {
 		$this->lang = $lang;
 		$this->align = $align;
 		echo "<script src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>";
 	}
 	
-	public function tweetByID($id) {
+	public function getLang(): string {
+		return $this->lang;
+	}
+	
+	public function setLang(string $lang): Twitter {
+		$this->lang = $lang;
+		return $this;
+	}
+	
+	public function getAlign(): string {
+		return $this->align;
+	}
+	
+	public function setAlign(string $align): Twitter {
+		$this->align = $align;
+		return $this;
+	}
+	
+	public function tweetByID(string $id): string {
 		$response = file_get_contents('https://api.twitter.com/1/statuses/oembed.json?id='.$id.'&omit_script=true'.'&align='.$this->align.'&lang='.$this->lang);
 		if($response === false) {
 			return "Error! Can't get that tweet!";
@@ -30,7 +43,7 @@ class Twitter {
 		return $json->html;
 	}
 	
-	public function tweetByURL($url) {
+	public function tweetByURL(string $url): string {
 		$response = file_get_contents('https://api.twitter.com/1/statuses/oembed.json?url='.$url.'&omit_script=true'.'&align='.$this->align.'&lang='.$this->lang);
 		if($response === false) {
 			return "Error! Can't get that tweet!";
@@ -40,7 +53,7 @@ class Twitter {
 		return $json->html;
 	}
 	
-	public function lastTweet($user) {
+	public function lastTweet(string $user): string {
 		$response = file_get_contents('https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$user.'&count=1');
 		if($response === false) {
 			return "Error! Can't get that tweet!";

@@ -10,7 +10,6 @@
 	echo \Lib\Net\Net::clientIP();
 	echo "<br>";
 	echo \Lib\Net\Net::pageURL();
-	\Tester\Assert::true(true);
 ?>
 	</body>
 </html>

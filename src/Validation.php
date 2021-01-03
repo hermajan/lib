@@ -10,7 +10,7 @@ class Validation {
 	 * @param string $number String with phone number.
 	 * @return bool True if string is a phone number, false otherwise.
 	 */
-	public static function czechPhone($number) {
+	public static function czechPhone(string $number): bool {
 		$match = preg_match("/^((\+420|00420) ?)?\d{3}( |)?\d{3}( |)?\d{3}$/", $number);
 		if($match === 1) {
 			return true;

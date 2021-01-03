@@ -6,6 +6,7 @@ namespace Lib\Services;
  * @see https://en.gravatar.com/
  */
 class Gravatar {
+	/** @var string */
 	private $email;
 	
 	/**
@@ -40,29 +41,54 @@ class Gravatar {
 	 * Gravatar constructor.
 	 * @param string $email for getting a Gravatar image.
 	 */
-	public function __construct($email) {
+	public function __construct(string $email) {
 		$this->email = $email;
 		$this->forceDefault = false;
 	}
 	
-	public function getEmail() { return $this->email; }
-	public function setEmail($email) { $this->email = $email; }
+	public function getEmail(): string {
+		return $this->email;
+	}
 	
-	public function getSize() { return $this->size; }
-	public function setSize($size) { $this->size = $size; }
+	public function setEmail(string $email): Gravatar {
+		$this->email = $email;
+		return $this;
+	}
 	
-	public function getDefault() { return $this->default; }
-	public function setDefault($default) { $this->default = $default; }
+	public function getSize(): int {
+		return $this->size;
+	}
 	
-	public function getRating() { return $this->rating; }
-	public function setRating($rating) { $this->rating = $rating; }
+	public function setSize(int $size): Gravatar {
+		$this->size = $size;
+		return $this;
+	}
 	
-	public function useDefault() {
+	public function getDefault(): string {
+		return $this->default;
+	}
+	
+	public function setDefault(string $default): Gravatar {
+		$this->default = $default;
+		return $this;
+	}
+	
+	public function getRating(): string {
+		return $this->rating;
+	}
+	
+	public function setRating(string $rating): Gravatar {
+		$this->rating = $rating;
+		return $this;
+	}
+	
+	public function useDefault(): Gravatar {
 		if($this->forceDefault == false) {
 			$this->forceDefault = true;
 		} else {
 			$this->forceDefault = false;
 		}
+		return $this;
 	}
 	
 	/**
@@ -70,13 +96,15 @@ class Gravatar {
 	 * @return string MD5 hash of email.
 	 * @see https://en.gravatar.com/site/implement/hash/
 	 */
-	public function createHash() { return md5(strtolower(trim($this->email))); }
+	public function createHash(): string {
+		return md5(strtolower(trim($this->email)));
+	}
 	
 	/**
 	 * Creates URL of a gravatar image.
 	 * @return string Image URL.
 	 */
-	public function createURL() {
+	public function createURL(): string {
 		$url = "https://secure.gravatar.com/avatar/".$this->createHash();
 		$url = $url."?s=".$this->size."&d=".$this->default."&r=".$this->rating;
 		
@@ -90,7 +118,7 @@ class Gravatar {
 	 * Returns HTML IMG tag with a Gravatar image.
 	 * @return string IMG tag.
 	 */
-	public function createImgTag() {
+	public function createImgTag(): string {
 		return "<img src='".$this->createURL()."' width='".$this->size."' height='".$this->size."'/>";
 	}
 }

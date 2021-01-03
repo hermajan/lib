@@ -9,7 +9,7 @@ class Net {
 	 * Returns client IP address.
 	 * @return string IP address
 	 */
-	public static function clientIP() {
+	public static function clientIP(): string {
 		return $_SERVER['REMOTE_ADDR'];
 	}
 	
@@ -17,7 +17,7 @@ class Net {
 	 * Returns URL of page, where function is called.
 	 * @return string URL of page
 	 */
-	public static function pageURL() {
+	public static function pageURL(): string {
 		$URL = "http";
 		if(!empty($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {
 			$URL .= "s";
