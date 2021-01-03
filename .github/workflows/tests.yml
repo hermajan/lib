@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         php: ['7.1', '7.2', '7.3', '7.4', '8.0']
-        dependencies: ['--prefer-lowest', '']
+        dependencies: ['', '--prefer-lowest']
     
     name: PHP ${{ matrix.php }} ${{ matrix.dependencies }}
     steps:
@@ -39,5 +39,5 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --no-progress ${{ matrix.dependecies }}
         
-#       - run: vendor/bin/phpstan analyse --configuration phpstan.neon --level max src
+      - run: vendor/bin/phpstan analyse src -c tests/phpstan.neon
       - run: vendor/bin/tester -C tests
