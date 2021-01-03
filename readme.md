@@ -10,3 +10,6 @@ Install this via [Composer](https://getcomposer.org):
 ```bash
 composer require hermajan/lib
 ```
+
+## Documentation
+Usage and documentation for this project is in [GitHub wiki](https://github.com/hermajan/lib/wiki). Examples are visible on [website](https://hermajan.net/lib).
