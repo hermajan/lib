@@ -6,5 +6,6 @@ Library with functions for web applications.
 
 ## Usage
 Install this via [Composer](https://getcomposer.org):
-
-`composer require hermajan/lib:dev-master`
+```bash
+composer require hermajan/lib
+```

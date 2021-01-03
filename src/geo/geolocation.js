@@ -10,10 +10,15 @@ var output = false;
  * @param id ID of element where position is written.
  */
 function locate(method, id) {
-	if(id !== false) { output = document.getElementById(id); }
+	if(id !== false) {
+		output = document.getElementById(id);
+	}
 	
-	if(navigator.geolocation) { navigator.geolocation.watchPosition(method, noLocate); }
-	else { noLocate(false); }
+	if(navigator.geolocation) {
+		navigator.geolocation.watchPosition(method, noLocate);
+	} else {
+		noLocate(false);
+	}
 }
 
 /**
@@ -21,32 +26,30 @@ function locate(method, id) {
  * @param error Type of geolocation error.
  */
 function noLocate(error) {
-	var message = "";
+	let message = "";
 	
 	if(error === false) {
 		message = "Your browser doesn't support Geolocation.";
-	}
-	else {
+	} else {
 		switch(error.code) {
 			case error.PERMISSION_DENIED:
-			  message = "User denied the request for Geolocation.";
-			  break;
+				message = "User denied the request for Geolocation.";
+				break;
 			case error.POSITION_UNAVAILABLE:
-			  message = "Location information is unavailable.";
-			  break;
+				message = "Location information is unavailable.";
+				break;
 			case error.TIMEOUT:
-			  message = "The request to get user location timed out.";
-			  break;
+				message = "The request to get user location timed out.";
+				break;
 			case error.UNKNOWN_ERROR:
-			  message = "An unknown error occurred.";
-			  break;
+				message = "An unknown error occurred.";
+				break;
 		}
 	}
 	
 	if(output === false) {
 		console.error(message);
-	}
-	else {
+	} else {
 		output.innerHTML = message;
 	}
 }
@@ -57,11 +60,11 @@ function noLocate(error) {
  * @returns Object with user position.
  */
 function returnPosition(position) {
-	var pos = [position.coords.latitude, position.coords.longitude, position.coords.accuracy, position.coords.altitude, position.coords.altitudeAccuracy, position.coords.heading, position.coords.speed, position.timestamp];
-	var text = ["latitude", "longitude", "accuracy", "altitude", "altitude accuracy", "heading", "speed", "timestamp"];
-	var title = ["The latitude as decimal degrees.", "The longitude as decimal degrees.", "The accuracy of position in meters.", "The altitude in meters above the mean sea level.", "The altitude accuracy of position in meters.", "The heading as degrees clockwise from North.", "The speed in meters per second.", "The timestamp of the response."];
+	let pos = [position.coords.latitude, position.coords.longitude, position.coords.accuracy, position.coords.altitude, position.coords.altitudeAccuracy, position.coords.heading, position.coords.speed, position.timestamp];
+	let text = ["latitude", "longitude", "accuracy", "altitude", "altitude accuracy", "heading", "speed", "timestamp"];
+	let title = ["The latitude as decimal degrees.", "The longitude as decimal degrees.", "The accuracy of position in meters.", "The altitude in meters above the mean sea level.", "The altitude accuracy of position in meters.", "The heading as degrees clockwise from North.", "The speed in meters per second.", "The timestamp of the response."];
 	
-	return { position: pos, text: text, title: title};
+	return {position: pos, text: text, title: title};
 }
 
 /**
@@ -69,15 +72,16 @@ function returnPosition(position) {
  * @param position User position.
  */
 function showPosition(position) {
-	var posi = returnPosition(position);	
-
-	while(output.hasChildNodes()) {   
+	let posi = returnPosition(position);
+	
+	while(output.hasChildNodes()) {
 		output.removeChild(output.firstChild);
 	}
-
-	for(var i = 0; i < posi.position.length; i++) {
-		var span = document.createElement("span");
-		span.title = posi.title[i]; span.appendChild(document.createTextNode(posi.text[i] + ": "+ posi.position[i]));
+	
+	for(let i = 0; i < posi.position.length; i++) {
+		let span = document.createElement("span");
+		span.title = posi.title[i];
+		span.appendChild(document.createTextNode(posi.text[i] + ": " + posi.position[i]));
 		output.appendChild(span);
 		output.appendChild(document.createElement("br"));
 	}

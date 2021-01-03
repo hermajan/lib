@@ -3,11 +3,11 @@
  * @returns {Array|getParameters.parameters} Parameters in the array in the format "'key'='value'".
  */
 function getParameters() {
-	var parameters = [];
-
-	var array = window.location.search.replace("?", "").split("&");
+	let parameters = [];
+	
+	let array = window.location.search.replace("?", "").split("&");
 	if(array.length > 0 && array[0] !== "") {
-		for(var i=0; i<array.length; i++) {
+		for(let i = 0; i < array.length; i++) {
 			parameters.push(array[i]);
 		}
 	}

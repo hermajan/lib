@@ -15,7 +15,7 @@ class Adminer {
 	 * @param bool $czech If true download only Czech version, false otherwise.
 	 * @param bool $verbose If true show verbose output, false otherwise.
 	 */
-	public static function download($folder = "", $mysql = false, $czech = false, $verbose = false): void {
+	public static function download(string $folder = "", bool $mysql = false, bool $czech = false, bool $verbose = false): void {
 		$url = "https://www.adminer.org/latest";
 		if($mysql == true) {
 			$url .= "-mysql";

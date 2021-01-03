@@ -4,7 +4,7 @@ namespace Lib\Net;
 /**
  * Working with internet related things.
  */
-class Net {
+class Addresses {
 	/**
 	 * Returns client IP address.
 	 * @return string IP address

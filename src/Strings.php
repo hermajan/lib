@@ -11,7 +11,7 @@ class Strings {
 	 * @param string $needle Substring for searching.
 	 * @return bool True if string starts with a substring, false otherwise.
 	 */
-	public static function startsWith($haystack, $needle) {
+	public static function startsWith($haystack, $needle): bool {
 		return (substr($haystack, 0, strlen($needle)) === $needle);
 	}
 	
@@ -21,7 +21,7 @@ class Strings {
 	 * @param string $needle Substring for searching.
 	 * @return bool True if string ends with a substring, false otherwise.
 	 */
-	public static function endsWith($haystack, $needle) {
+	public static function endsWith(string $haystack, string $needle): bool {
 		return (substr($haystack, -strlen($needle)) === $needle);
 	}
 	

@@ -10,16 +10,16 @@ use Tester\{Assert, TestCase};
  */
 class StringsTest extends TestCase {
 	private $string;
-
+	
 	public function setUp() {
 		$this->string = "hello";
 	}
-
+	
 	public function testStartsWith() {
 		Assert::true(Strings::startsWith($this->string, "he"));
 		Assert::false(Strings::startsWith($this->string, "el"));
 	}
-
+	
 	public function testEndsWith() {
 		Assert::true(Strings::endsWith($this->string, "lo"));
 		Assert::false(Strings::endsWith($this->string, "el"));
